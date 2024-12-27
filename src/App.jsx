@@ -1,5 +1,5 @@
 import React from "react";
-import HeadComponent from "./HeadComponent";
+import HeadComponent from "./components/HeadComponent";
 
 const App = () => {
   return (
