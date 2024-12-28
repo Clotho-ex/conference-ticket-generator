@@ -4,14 +4,18 @@ const InputComponent = () => {
   return (
     <>
       <div className="flex flex-col">
-        <label className="text-white mt-[24px] mb-[12px]">Full Name</label>
+        <label className="text-white mt-[24px] mb-[12px]" htmlFor="name">
+          Full Name
+        </label>
         <input
           type="text"
           name="text"
           id="name"
           className="p-[16px] rounded-xl bg-white bg-opacity-10 ring-2 ring-Cool-Gray"
         />
-        <label className="text-white mt-[24px] mb-[12px]">Email Adress</label>
+        <label className="text-white mt-[24px] mb-[12px]" htmlFor="email">
+          Email Address
+        </label>
         <input
           type="email"
           name="email"
@@ -19,13 +23,13 @@ const InputComponent = () => {
           placeholder="example@email.com"
           className="p-[16px] rounded-xl bg-white bg-opacity-10 ring-2 ring-Cool-Gray"
         />
-        <label className="text-white mt-[24px] mb-[12px]">
+        <label className="text-white mt-[24px] mb-[12px]" htmlFor="github">
           GitHub Username
         </label>
         <input
-          type="email"
-          name="email"
-          id="email"
+          type="text"
+          name="github"
+          id="github"
           placeholder="@yourusername"
           className="p-[16px] rounded-xl bg-white bg-opacity-10 ring-2 ring-Cool-Gray"
         />

@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "Oxford-Blue": "#0D082D",
-        "English-Violet": "#4B4869",
-        "Cool-Gray": "#8784A5",
-        "French-Grey": "#D1D0D5",
+        "oxford-blue": "#0D082D",
+        "english-violet": "#4B4869",
+        "cool-gray": "#8784A5",
+        "french-grey": "#D1D0D5",
         White: "#FFFFFF",
         Jasper: "#E1604F",
         Bittersweet: "#F57463",
