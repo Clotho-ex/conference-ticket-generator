@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
-const InputComponent = () => {
+const InputComponent = ({ onSubmit, formData }) => {
+  const [fullName, setFullName] = useState(formData.fullName);
+  const [email, setEmail] = useState(formData.email);
+  const [github, setGithub] = useState(formData.github);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit({ fullName, email, github, avatar: formData.avatar });
+  };
+
   return (
-    <>
+    <form onSubmit={handleSubmit}>
       <div className="flex flex-col">
         <label className="text-white mt-[24px] mb-[12px]" htmlFor="name">
           Full Name
@@ -11,7 +20,9 @@ const InputComponent = () => {
           type="text"
           name="text"
           id="name"
-          className="p-[16px] rounded-xl bg-white bg-opacity-10 ring-2 ring-Cool-Gray"
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
+          className="p-[16px] rounded-xl text-white bg-white bg-opacity-10 ring-2 ring-cool-gray"
         />
         <label className="text-white mt-[24px] mb-[12px]" htmlFor="email">
           Email Address
@@ -20,8 +31,10 @@ const InputComponent = () => {
           type="email"
           name="email"
           id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="example@email.com"
-          className="p-[16px] rounded-xl bg-white bg-opacity-10 ring-2 ring-Cool-Gray"
+          className="p-[16px] rounded-xl text-white bg-white bg-opacity-10 ring-2 ring-cool-gray"
         />
         <label className="text-white mt-[24px] mb-[12px]" htmlFor="github">
           GitHub Username
@@ -30,16 +43,18 @@ const InputComponent = () => {
           type="text"
           name="github"
           id="github"
+          value={github}
+          onChange={(e) => setGithub(e.target.value)}
           placeholder="@yourusername"
-          className="p-[16px] rounded-xl bg-white bg-opacity-10 ring-2 ring-Cool-Gray"
+          className="p-[16px] rounded-xl text-white bg-white bg-opacity-10 ring-2 ring-cool-gray"
         />
         <button
-          className="bg-Bittersweet text-2xl text-Oxford-Blue font-extrabold p-[16px] mt-[24px] mb-[60px] rounded-xl"
+          className="bg-bittersweet text-2xl text-oxford-blue font-extrabold p-[16px] mt-[24px] mb-[60px] rounded-xl"
           type="submit">
           Generate My Ticket
         </button>
       </div>
-    </>
+    </form>
   );
 };
 
