@@ -16,7 +16,7 @@ const TicketComponent = ({ formData }) => {
     <div className="text-center text-white md:px-spacing-12 lg:px-spacing-12 xl:px-spacing-13">
       {/* Header */}
       <img
-        src="/src/assets/images/logo-full.svg"
+        src="/logo-full.svg"
         alt="Logo"
         className="mx-auto pt-8"
       />
@@ -52,7 +52,7 @@ const TicketComponent = ({ formData }) => {
           <div className="flex justify-between">
             <div>
               <img
-                src="/src/assets/images/logo-full.svg"
+                src="/logo-full.svg"
                 alt="Logo"
                 className="w-24 md:w-48 mb-2 lg:w-60"
               />

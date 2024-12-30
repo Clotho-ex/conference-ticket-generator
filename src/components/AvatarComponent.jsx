@@ -51,7 +51,7 @@ const AvatarComponent = ({ setFormData, formData }) => {
               className="gap-2 px-2 py-2 mt-6 mb-4 bg-white bg-opacity-10 rounded-2xl cursor-pointer">
               <img
                 width={55}
-                src="src/assets/images/icon-upload.svg"
+                src="/icon-upload.svg"
                 alt="Upload Icon"
               />
             </label>

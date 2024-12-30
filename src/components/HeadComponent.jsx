@@ -4,7 +4,7 @@ const HeadComponent = () => {
   return (
     <>
       <div className="flex justify-center items-center pt-8">
-        <img src="/src/assets/images/logo-full.svg" alt="Logo" />
+        <img src="/logo-full.svg" alt="Logo" />
       </div>
       <div>
         <h1 className="text-3xl lg:text-6xl font-bold text-center text-white pt-12">
