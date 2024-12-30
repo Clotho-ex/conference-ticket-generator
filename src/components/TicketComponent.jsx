@@ -13,7 +13,7 @@ const TicketComponent = ({ formData }) => {
   const [firstName, lastName] = formData.fullName.split(" ");
 
   return (
-    <div className="text-center text-white">
+    <div className="text-center text-white md:px-spacing-12 lg:px-spacing-12 xl:px-spacing-13">
       {/* Header */}
       <img
         src="/src/assets/images/logo-full.svg"
@@ -22,19 +22,22 @@ const TicketComponent = ({ formData }) => {
       />
 
       {/* Congratulations Message */}
-      <h1 className="text-[2rem] lg:text-4xl font-bold pt-12">
+      <h1 className="text-[2rem] lg:text-5xl xl:text-6xl font-bold pt-12">
         Congrats,{" "}
         <span className="bg-gradient-1 bg-clip-text text-transparent">
-          {firstName} {lastName}
+          {firstName} {lastName}!{" "}
+          <br className="hidden md:inline-block lg:inline-block 2xl:inline-block" />
         </span>
-        ! Your ticket is ready.
+        Your ticket is ready.
       </h1>
 
       {/* Email Notification */}
-      <p className="text-[22px] pt-12">
-        We've emailed your ticket to{" "}
+      <p className="text-[22px]  pt-12 text-center">
+        We've emailed your ticket to <br />
         <span className="text-bittersweet">{formData.email}</span> and will send
-        updates in the run up to the event.
+        updates in{" "}
+        <br className="hidden md:inline-block lg:inline-block xl:inline-block" />
+        the run up to the event.
       </p>
 
       {/* Ticket Card */}
@@ -51,9 +54,9 @@ const TicketComponent = ({ formData }) => {
               <img
                 src="/src/assets/images/logo-full.svg"
                 alt="Logo"
-                className="w-24 md:w-30 mb-2"
+                className="w-24 md:w-48 mb-2 lg:w-60"
               />
-              <p className="text-xs md:text-sm ml-4 md:ml-8">
+              <p className="text-xs ml-4 md:ml-8 md:text-base lg:text-lg 2xl:text-2xl">
                 {formattedDate} / Austin, TX
               </p>
             </div>
@@ -65,14 +68,14 @@ const TicketComponent = ({ formData }) => {
           </div>
 
           {/* User Info */}
-          <div className="flex items-center pt-12 md:pt-24 gap-4">
+          <div className="flex items-center pt-12 md:pt-24 lg:pt-32 gap-4">
             <img
               src={formData.avatar}
               alt="Avatar"
               className="w-12 h-12 md:w-16 md:h-16 rounded-xl"
             />
             <div>
-              <p className="text-lg md:text-xl font-bold -ml-3">
+              <p className="text-lg md:text-xl font-bold text-left">
                 {firstName} {lastName}
               </p>
               <div className="flex items-center gap-2 text-gray-400 text-sm md:text-base">

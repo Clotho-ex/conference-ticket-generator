@@ -21,6 +21,7 @@ export default {
           lg: "4rem",
           xl: "5rem",
           "2xl": "6rem",
+          "4xl": "12rem",
         },
       },
 
@@ -51,8 +52,8 @@ export default {
         "spacing-9": "32px",
         "spacing-10": "40px",
         "spacing-11": "48px",
-        "spacing-12": "64px",
-        "spacing-13": "80px",
+        "spacing-12": "7rem",
+        "spacing-13": "28rem",
       },
 
       borderRadius: {

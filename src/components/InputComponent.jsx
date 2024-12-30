@@ -12,7 +12,7 @@ const InputComponent = ({ onSubmit, formData }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="flex flex-col">
+      <div className="flex flex-col md:px-spacing-12 lg:px-spacing-12 xl:px-spacing-13">
         <label className="text-white mt-[24px] mb-[12px]" htmlFor="name">
           Full Name
         </label>
@@ -49,7 +49,7 @@ const InputComponent = ({ onSubmit, formData }) => {
           className="p-[16px] rounded-xl text-white bg-white bg-opacity-10 ring-2 ring-cool-gray"
         />
         <button
-          className="bg-bittersweet text-2xl text-oxford-blue font-extrabold p-[16px] mt-[24px] mb-[60px] rounded-xl"
+          className="bg-bittersweet text-2xl text-oxford-blue font-extrabold p-[16px] mt-[24px] mb-[60px] rounded-xl hover:brightness-110"
           type="submit">
           Generate My Ticket
         </button>
